@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//En"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	
+	
+	<hibernate-mapping>
+		
+	<class name ="oneToMany.Employee" table="Employee">
+	
+	<id name ="eid" column = "eid">
+	
+		<generator class="increment"></generator>
+	</id>
+	
+	<property name ="fname" column = "f_name" length ="15"></property>
+	<property name ="lname" column = "l_name" length ="15"></property>
+	<many-to-one name="department" class ="oneToMany.Department" fetch ="join"><column name="dept_id"></column></many-to-one>
+	
+	</class>
+	</hibernate-mapping>
