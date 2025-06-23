@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+	   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:p = "http://www.springframework.org/schema/p"
+	   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+							  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+		>
+		
+<bean class = "depconsaggr.Address" id="o1">
+
+<constructor-arg value = "baking street" type = "String"></constructor-arg>
+<constructor-arg value = "chennai" type = "String"></constructor-arg>
+<constructor-arg value = "pune" type = "String"></constructor-arg>
+
+</bean>
+<bean class="depconsaggr.Address" id="a1">
+
+<constructor-arg value="alwar road" type="String"></constructor-arg>
+<constructor-arg value="bhiwadi" type="String"></constructor-arg>
+<constructor-arg value="rajasthan" type="String"></constructor-arg>
+</bean>
+
+<bean class="depconsaggr.EmpAdress" id="e1">
+
+<constructor-arg value="1" type="int"></constructor-arg>
+<constructor-arg value="Ankit" type="String"></constructor-arg>
+ <constructor-arg><ref bean="a1"/></constructor-arg> 
+<!-- constructor-args> 
+<list>
+<value>Anjum nagar</value>
+<value>Vellore</value>
+<value>Mumbai</value>
+</list>
+
+</ constructor-arg -->
+
+</bean>	
+		
+		
+</beans>	
